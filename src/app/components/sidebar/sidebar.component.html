@@ -4,5 +4,20 @@
             <i class='bx bxs-dog'></i>
             <p class="siderbar__name">Dual<span>Vet</span></p>
         </div>
+        <i class='bx bx-menu'></i>
+        <ul class="sidebar__list">
+            <a [routerLink]="'home'">
+            <i class='bx bxs-home-alt-2'></i>
+            Home
+            </a>
+            <a [routerLink]="'products/products-create'">
+            <i class='bx bxs-plus-circle'></i>
+            Criar produto
+            </a>
+            <a [routerLink]="'products/products-list'">
+            <i class='bx bxs-grid-alt'></i>
+            Lista de produtos
+            </a>
+        </ul>
     </header>
 </navbar>
