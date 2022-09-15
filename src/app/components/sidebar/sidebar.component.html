@@ -1,23 +1,20 @@
-<navbar class="siderbar">
-    <header class="sidebar__header">
-        <div class="siderbar__header--logo">
-            <i class='bx bxs-dog'></i>
-            <p class="siderbar__name">Dual<span>Vet</span></p>
-        </div>
-        <i class='bx bx-menu'></i>
-        <ul class="sidebar__list">
-            <a [routerLink]="'home'">
-            <i class='bx bxs-home-alt-2'></i>
-            Home
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+        <button class="logo" (click)="toggleCollapse()">D</button>
+        <div class="logo-text" @fadeInOut *ngIf="collapsed">DualVet</div>
+        <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+            <i class="fal fa-times close-icon"></i>
+        </button>
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <i class="sidenav-link-icon" [class]="data.icon"></i>
+                <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                    {{data.label}}
+                </span>
             </a>
-            <a [routerLink]="'products/products-create'">
-            <i class='bx bxs-plus-circle'></i>
-            Criar produto
-            </a>
-            <a [routerLink]="'products/products-list'">
-            <i class='bx bxs-grid-alt'></i>
-            Lista de produtos
-            </a>
-        </ul>
-    </header>
-</navbar>
+        </li>
+    </ul>
+</div>
