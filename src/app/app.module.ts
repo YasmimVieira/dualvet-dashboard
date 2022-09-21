@@ -6,15 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { GraphComponent } from './components/graph/graph.component';
 import { ProductsModule } from './products/products.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
-    GraphComponent,
     SidebarComponent
 
   ],
@@ -23,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ProductsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   providers: [],

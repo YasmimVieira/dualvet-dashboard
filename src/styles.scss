@@ -14,3 +14,9 @@ body {
 input[type="text"]:focus {
     border: 2px solid $purple;
 }
+
+.header {
+    position: relative;
+    height: 20vh;
+    background-color: $purple;
+}
