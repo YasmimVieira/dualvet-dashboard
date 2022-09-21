@@ -1,5 +1,8 @@
-<div *ngFor="let products of product">
-    <p>{{ products.productName }}</p>
-    <p>{{ products.productDescription }}</p>
-    <p>{{ products.productPrice }}</p>
-</div>
+<section class="card" *ngFor="let products of product">
+    <p>{{ products.productName | titlecase }} | {{ products.productDescription }} | {{ products.productPrice }}</p>
+
+    <div class="card__modal">
+        <p>oi</p>
+        <p>oi</p>
+    </div>
+</section>

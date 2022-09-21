@@ -1,0 +1,21 @@
+@import '../../../assets/utils/variables';
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: $dark;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .6s;
+    width: 95%;
+
+    &:hover {
+        background-color: $purple;
+    }
+
+    &__modal {
+        display: flex;
+    }
+}
