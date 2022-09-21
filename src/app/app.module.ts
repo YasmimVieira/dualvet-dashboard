@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { ProductsModule } from './products/products.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductsModule } from './products/products.module';
     BrowserModule,
     AppRoutingModule,
     ProductsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   providers: [],
