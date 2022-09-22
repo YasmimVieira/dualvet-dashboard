@@ -9,6 +9,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ProductsModule } from './products/products.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { NgChartsModule } from 'ng2-charts';
     ProductsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgChartsModule,
+    NgChartsModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   providers: [],

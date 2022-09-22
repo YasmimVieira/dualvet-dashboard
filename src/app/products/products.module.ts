@@ -7,6 +7,7 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { GraphComponent } from '../components/graph/graph.component';
 import { NgChartsModule } from 'ng2-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { NgChartsModule } from 'ng2-charts';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductsModule { }

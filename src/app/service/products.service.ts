@@ -13,8 +13,24 @@ export class ProductsService {
 
   constructor(private httpClient: HttpClient) { }
 
+  /**
+   * Lista todos produtos
+   * @returns 
+   */
   public getProducts(): Observable<Products[]> {
     return this.httpClient.get<Products[]>(`${this.API}product`)
+    .pipe(
+      resp => resp
+    )
+  }
+
+  /**
+   * Cria um novo produto
+   * @param productInformation 
+   * @returns 
+   */
+  public setNewProduct(productInformation: Products): Observable<Products[]> {
+    return this.httpClient.post<Products[]>(`${this.API}product`, productInformation)
     .pipe(
       resp => resp
     )
