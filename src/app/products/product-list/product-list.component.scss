@@ -7,7 +7,6 @@
     padding: 1rem;
     background-color: $dark;
     border-radius: 5px;
-    cursor: pointer;
     transition: .6s;
     width: 95%;
 
@@ -17,5 +16,23 @@
 
     &__modal {
         display: flex;
+        align-items: center;
+
+        &-icons {
+           height: 45%;
+           margin-right: 1rem;
+           padding: 0.2rem;
+           border-radius: 5px;
+           cursor: pointer;
+        }
+
+        &-icons--delete {
+            background-color: $red;
+
+        }
+
+        &-icons--edit {
+            background-color: $yellow;
+        }
     }
 }
