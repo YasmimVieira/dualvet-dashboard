@@ -10,7 +10,6 @@ import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../components/spinner/spinner.component';
 
-
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -24,7 +23,7 @@ import { SpinnerComponent } from '../components/spinner/spinner.component';
     ProductsRoutingModule,
     NgChartsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class ProductsModule { }

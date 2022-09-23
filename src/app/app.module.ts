@@ -9,8 +9,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ProductsModule } from './products/products.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ProductsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    ToastrModule.forRoot(),
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   providers: [],

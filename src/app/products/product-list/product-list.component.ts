@@ -11,6 +11,7 @@ import { ProductsService } from 'src/app/service/products.service';
 export class ProductListComponent implements OnInit {
   public product!: Products[];
   public result!: ResultState;
+  public isAvailable = true;
   
   constructor(private productService: ProductsService) { }
 
@@ -25,7 +26,10 @@ export class ProductListComponent implements OnInit {
   private getProductList() {
     this.productService.getProducts()
       .subscribe({
-        next: (resp) => this.product = resp,
+        next: (resp) => {
+          this.isAvailable = false
+          this.product = resp
+        },
         error: (error) => this.result = error
       })
   }
