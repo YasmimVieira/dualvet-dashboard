@@ -1,0 +1,28 @@
+@import '../../../assets/utils/variables';
+
+.authentication {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+            border-bottom: 5px solid $purple;
+            padding: 0.5rem;
+        }
+    }
+    
+    &__image {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: $purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -14,10 +14,10 @@
         </section>
         <footer class="form__footer">
             <ng-container *ngIf="!spinner; else spinnerValid">
-                <button type="submit" [disabled]="!productForm.valid" class="form__footer__button">Criar produto</button>
+                <button type="submit" [disabled]="!productForm.valid" class="button">Criar produto</button>
             </ng-container>
             <ng-template #spinnerValid>
-                <button type="submit" class="form__footer__button">
+                <button type="submit" class="button">
                     <app-spinner></app-spinner>
                 </button>
             </ng-template>

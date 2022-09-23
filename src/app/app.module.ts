@@ -11,12 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
     SidebarComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
