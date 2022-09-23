@@ -1,7 +1,8 @@
 <section class="card" *ngFor="let products of product">
-    <p>{{ products.productName | titlecase }} | {{ products.productDescription }} | {{ products.productPrice }}</p>
+    <app-skeleton *ngIf="!isAvailable" Cwidth="100" Cheight="100"></app-skeleton>
+    <p *ngIf="isAvailable">{{ products.productName | titlecase }} | {{ products.productDescription }} | {{ products.productPrice }}</p>
 
-    <div class="card__modal">
+    <div class="card__modal" *ngIf="isAvailable">
         <div class="card__modal-icons card__modal-icons--edit">
             <i class="material-icons">edit</i>
         </div>

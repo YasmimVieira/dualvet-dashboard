@@ -9,6 +9,7 @@ import { GraphComponent } from '../components/graph/graph.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../components/spinner/spinner.component';
+import { SkeletonComponent } from '../components/skeleton/skeleton.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SpinnerComponent } from '../components/spinner/spinner.component';
     CreateProductComponent,
     ProductListComponent,
     GraphComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SkeletonComponent
   ],
   imports: [
     CommonModule,
