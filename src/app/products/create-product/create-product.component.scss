@@ -1,5 +1,13 @@
 @import '../../../assets/utils/variables';
 
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
 .form {
     margin: 1rem;
     padding: 1rem;

@@ -1,24 +1,26 @@
-<form class="form" [formGroup]="productForm" (ngSubmit)="submitNewProduct()">
-    <h3 class="form__title">Criar novo produto</h3>
-    <section class="form__inputs">
-        <input type="text" class="form__inputs__style" placeholder="Digite o nome do produto" formControlName="productName">
-        <input type="text" class="form__inputs__style" placeholder="Digite a descrição do produto" formControlName="productDescription">
-        <input type="text" class="form__inputs__style" placeholder="Digite o preço do produto" formControlName="productPrice">
-        <label class="form__inputs__style--upload">
-            <span>Adicione a foto do produto</span>
-            <i class="material-icons form__inputs__style--span">upload_file</i>
-            <input type="file">
-        </label>
-        
-    </section>
-    <footer class="form__footer">
-        <ng-container *ngIf="!spinner; else spinnerValid">
-            <button type="submit" [disabled]="!productForm.valid" class="form__footer__button">Criar produto</button>
-        </ng-container>
-        <ng-template #spinnerValid>
-            <button type="submit" class="form__footer__button">
-                <app-spinner></app-spinner>
-            </button>
-        </ng-template>
-    </footer>
-</form>
+<section class="product">
+    <form class="form" [formGroup]="productForm" (ngSubmit)="submitNewProduct()">
+        <h3 class="form__title">Criar novo produto</h3>
+        <section class="form__inputs">
+            <input type="text" class="form__inputs__style" placeholder="Digite o nome do produto" formControlName="productName">
+            <input type="text" class="form__inputs__style" placeholder="Digite a descrição do produto" formControlName="productDescription">
+            <input type="text" class="form__inputs__style" placeholder="Digite o preço do produto" formControlName="productPrice">
+            <label class="form__inputs__style--upload">
+                <span>Adicione a foto do produto</span>
+                <i class="material-icons form__inputs__style--span">upload_file</i>
+                <input type="file">
+            </label>
+            
+        </section>
+        <footer class="form__footer">
+            <ng-container *ngIf="!spinner; else spinnerValid">
+                <button type="submit" [disabled]="!productForm.valid" class="form__footer__button">Criar produto</button>
+            </ng-container>
+            <ng-template #spinnerValid>
+                <button type="submit" class="form__footer__button">
+                    <app-spinner></app-spinner>
+                </button>
+            </ng-template>
+        </footer>
+    </form>
+</section>
