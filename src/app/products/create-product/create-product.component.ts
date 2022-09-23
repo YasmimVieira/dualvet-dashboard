@@ -10,6 +10,8 @@ import { ProductsService } from 'src/app/service/products.service';
 })
 export class CreateProductComponent implements OnInit {
 
+  public spinner = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductsService
@@ -25,6 +27,8 @@ export class CreateProductComponent implements OnInit {
   })
 
   public submitNewProduct(): void {
+    this.spinner = true;
+
     const newProductObj: Products = {
       productName: this.productForm.controls.productName.value!,
       productDescription: this.productForm.controls.productDescription.value!,
@@ -32,7 +36,9 @@ export class CreateProductComponent implements OnInit {
     }
     this.productService.setNewProduct(newProductObj)
       .subscribe({
-        next: (resp) => console.log("enviei", resp),
+        next: (resp) => {
+          this.spinner = false;
+        },
         error: (error) => error
       })
   }

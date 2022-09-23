@@ -10,13 +10,13 @@ import { ProductsModule } from './products/products.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
-    SidebarComponent
-
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
