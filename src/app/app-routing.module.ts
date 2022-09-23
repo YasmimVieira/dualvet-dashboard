@@ -5,9 +5,9 @@ import { PageRoutes } from './enum/page-routes.enum';
 const routes: Routes = [
   { path: '', redirectTo: PageRoutes.AUTHENTICATION, pathMatch: 'full' },
   { 
-    path: PageRoutes.PRODUCTS_ROUTER, loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+    path: PageRoutes.PRODUCTS_ROUTER, loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule)
   },
-  { path: PageRoutes.AUTHENTICATION, loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) }
+  { path: PageRoutes.AUTHENTICATION, loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule) }
 ];
 
 @NgModule({

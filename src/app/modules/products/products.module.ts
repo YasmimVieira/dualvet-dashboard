@@ -5,11 +5,11 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { GraphComponent } from '../components/graph/graph.component';
+import { GraphComponent } from '../../components/graph/graph.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SpinnerComponent } from '../components/spinner/spinner.component';
-import { SkeletonComponent } from '../components/skeleton/skeleton.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
 
 @NgModule({
   declarations: [

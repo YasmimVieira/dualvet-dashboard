@@ -6,11 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { ProductsModule } from './products/products.module';
+import { ProductsModule } from './modules/products/products.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { ToastrModule } from 'ngx-toastr';
-import { SkeletonComponent } from './components/skeleton/skeleton.component';
+import { AuthenticationModule } from './modules/authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { SkeletonComponent } from './components/skeleton/skeleton.component';
     BrowserModule,
     AppRoutingModule,
     ProductsModule,
+    AuthenticationModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgChartsModule,
