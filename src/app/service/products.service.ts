@@ -18,7 +18,7 @@ export class ProductsService {
    * @returns 
    */
   public getProducts(): Observable<Products[]> {
-    return this.httpClient.get<Products[]>(`${this.API}product`)
+    return this.httpClient.get<Products[]>(this.API)
     .pipe(
       resp => resp
     )
@@ -29,10 +29,19 @@ export class ProductsService {
    * @param productInformation 
    * @returns 
    */
-  public setNewProduct(productInformation: Products): Observable<Products[]> {
-    return this.httpClient.post<Products[]>(`${this.API}product`, productInformation)
+  public setNewProduct(productInformation: Products): Observable<Products> {
+    return this.httpClient.post<Products>(this.API, productInformation)
     .pipe(
       resp => resp
     )
+  }
+
+  /**
+   * Edita um produto
+   * @param productInformation 
+   * @returns 
+   */
+  public editProduct(productInformation: Products): Observable<Products> {
+    return this.httpClient.put<Products>(`${this.API}/${productInformation.id}`, productInformation)
   }
 }
