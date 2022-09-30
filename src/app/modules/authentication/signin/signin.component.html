@@ -1,1 +1,14 @@
-<p>signin works!</p>
+<form class="signin">
+    <header class="signin__header">
+        <h2 class="signin__header__title">Login</h2>
+    </header>
+
+    <div class="signin__inputs">
+        <input type="text" class="signin__inputs__style" placeholder="Digite seu nome de usuario">
+        <input type="password" class="signin__inputs__style" placeholder="Digite sua senha">
+    </div>
+    <footer class="signin__footer">
+        <button class="button signin__footer__button">Fazer login</button>
+        <span>Ainda nao possui conta? </span><a [routerLink]="'/signup'">Criar conta</a>
+    </footer>
+</form>

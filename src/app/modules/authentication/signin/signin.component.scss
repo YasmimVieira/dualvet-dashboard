@@ -1,0 +1,43 @@
+@import '../../../../assets/utils/variables';
+
+.signin {
+    background-color: $dark;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 35vw;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            border-bottom: 5px solid $purple;
+            margin: 0 0 1rem;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        &__style {
+            border: 2px solid $purple;
+            background-color: $black-dark;
+            margin-top: 1rem;
+            padding: 0.9rem;
+            border-radius: 5px;
+            outline: none;
+            color: $white;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+
+        &__button {
+            margin-bottom: 1rem;
+        }
+    }
+}
