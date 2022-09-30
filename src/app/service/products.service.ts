@@ -42,6 +42,15 @@ export class ProductsService {
    * @returns 
    */
   public editProduct(productInformation: Products): Observable<Products> {
-    return this.httpClient.put<Products>(`${this.API}/${productInformation.id}`, productInformation)
+    return this.httpClient.put<Products>(`${this.API}/${productInformation.id}`, productInformation);
+  }
+
+  /**
+   * Exclui um produto
+   * @param id 
+   * @returns 
+   */
+  public deleteProduct(id: number): Observable<Products> {
+    return this.httpClient.delete<Products>(`${this.API}/${id}`);
   }
 }
