@@ -19,10 +19,10 @@ import { InputsComponent } from './components/inputs/inputs.component';
   declarations: [
     AppComponent,
     CardsComponent,
-    SidebarComponent,
     ButtonComponent,
     ModalComponent,
     InputsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

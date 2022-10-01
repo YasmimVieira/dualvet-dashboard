@@ -10,6 +10,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
+import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { SkeletonComponent } from '../../components/skeleton/skeleton.component'
     ProductListComponent,
     GraphComponent,
     SpinnerComponent,
-    SkeletonComponent
+    SkeletonComponent,
   ],
   imports: [
     CommonModule,

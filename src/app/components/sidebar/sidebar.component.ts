@@ -1,5 +1,5 @@
-import { animate, keyframes, style, transition, trigger } from '@angular/animations';
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { sidebar } from './sidebar'
 
 @Component({
   selector: 'app-sidebar',
@@ -8,9 +8,9 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
   
 })
 export class SidebarComponent implements OnInit {
-
- 
-
+  
+  public sidebar = sidebar;
+  
   constructor() { }
 
   ngOnInit() {}

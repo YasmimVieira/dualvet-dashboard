@@ -1,9 +1,13 @@
 @import '../../../assets/utils/variables';
 
+.products {
+    display: flex;
+}
+
 .cards {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 
     &__line {
@@ -16,7 +20,7 @@
         text-align: center;
         width: 20%;
         font-size: 1.2rem;
-        margin-top: 5rem;
+        margin-top: 2rem;
         border-radius: 5px;
         padding: 1rem;
         height: 10vh;
@@ -37,5 +41,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }

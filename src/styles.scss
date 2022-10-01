@@ -16,9 +16,11 @@ input[type="text"]:focus {
 }
 
 .header {
-    position: relative;
-    height: 20vh;
-    background-color: $purple;
+    margin-right: 1rem;
+}
+
+p {
+    margin: 0;
 }
 
 .button {
