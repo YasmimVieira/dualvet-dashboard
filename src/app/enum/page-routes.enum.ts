@@ -1,5 +1,7 @@
 export enum PageRoutes {
-    PRODUCTS_ROUTER = 'products',
+    PRODUCTS = 'products',
+    PRODUCT_LIST = 'list',
+    PRODUCTS_CREATE = 'create',
     AUTHENTICATION = 'authentication',
     SIGNUP = 'signup'
 }

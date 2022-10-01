@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Products } from 'src/app/interfaces/products.interface';
+import { PageRoutes } from 'src/app/enum/page-routes.enum';
+import { ToastMessage } from 'src/app/enum/toast-messages.enum';
 import { ProductsService } from 'src/app/service/products.service';
 
 @Component({
@@ -12,37 +14,47 @@ import { ProductsService } from 'src/app/service/products.service';
 export class CreateProductComponent implements OnInit {
 
   public spinner = false;
+  public productForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductsService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.buildForm();
   }
 
-  public productForm = this.formBuilder.group({
-    productName: ['', Validators.required],
-    productDescription: ['', Validators.required],
-    productPrice: ['', Validators.required],
-  })
+  /**
+   * Constroi o formulario e validacoes
+   */
+  private buildForm(): void {
+    this.productForm = this.formBuilder.group({
+      productName: ['', Validators.required],
+      productDescription: ['', Validators.required],
+      productPrice: ['', Validators.required],
+    })
+  }
 
+  /**
+   * Submit para criar o produto
+   */         
   public submitNewProduct(): void {
     this.spinner = true;
 
-    const newProductObj: Products = {
-      productName: this.productForm.controls.productName.value!,
-      productDescription: this.productForm.controls.productDescription.value!,
-      productPrice: this.productForm.controls.productPrice.value!,
-    }
-    this.productService.setNewProduct(newProductObj)
+    this.productService.setNewProduct(this.productForm.value)
       .subscribe({
         next: () => {
-          this.spinner = false;
-          this.toastrService.success('Produto criado com sucesso!', 'Muito bem!')
+          this.spinner = false
+          this.toastrService.success(ToastMessage.TOAST_SUCCESS, ToastMessage.TOAST_SUCCESS_TITLE);
+          this.router.navigate([PageRoutes.PRODUCT_LIST])
         },
-        error: (error) => error
+        error: (error) => {
+          this.spinner = false
+          this.toastrService.error(error.error, ToastMessage.TOAST_ERROR_TITLE);
+        }
       })
   }
 }
