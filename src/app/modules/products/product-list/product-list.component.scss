@@ -1,42 +1,37 @@
 @import '../../../../assets/utils/variables-mixins';
 
-.list {
-    margin-left: 8rem;
-}
-
 .card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 1rem;
-    padding: 1rem;
-    background-color: $dark;
-    border-radius: 5px;
-    transition: .6s;
-    width: 95%;
 
-    &:hover {
-        background-color: $purple;
+    &__list {
+        background-color: $dark;
+        border-radius: 10px;
+        padding: 0.9rem;
+        margin-top: 1rem;
+
+        &__title {
+            font-weight: $bold;
+            margin: 0 0 1rem;
+        }
     }
 
     &__modal {
         display: flex;
-        align-items: center;
 
-        &-icons {
-           height: 45%;
-           margin-right: 1rem;
-           padding: 0.2rem;
-           border-radius: 5px;
-           cursor: pointer;
-        }
+        &__icons {
+            padding: 0.2rem;
+            border-radius: 5px;
+            &--edit {
+                background-color: $yellow;
+            }
 
-        &-icons--delete {
-            background-color: $red;
-
-        }
-
-        &-icons--edit {
-            background-color: $yellow;
+            &--delete {
+                margin-left: 1rem;
+                background-color: $red;
+            }
         }
     }
 }

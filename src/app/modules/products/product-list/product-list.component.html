@@ -1,13 +1,13 @@
-<section class="list">
-    <section class="card" *ngFor="let products of product">
+<section class="card">
+    <section class="card__list" *ngFor="let products of product">
         <app-skeleton *ngIf="!isAvailable" Cwidth="100" Cheight="100"></app-skeleton>
-        <p *ngIf="isAvailable">{{ products.productName | titlecase }} | {{ products.productDescription }} | {{ products.productPrice }}</p>
+        <p *ngIf="isAvailable" class="card__list__title">{{ products.productName | titlecase }}</p>
     
         <div class="card__modal" *ngIf="isAvailable">
-            <div class="card__modal-icons card__modal-icons--edit">
+            <div class="card__modal__icons card__modal__icons--edit">
                 <i class="material-icons">edit</i>
             </div>
-            <div class="card__modal-icons card__modal-icons--delete">
+            <div class="card__modal__icons card__modal__icons--delete">
                 <i class="material-icons">delete</i>
             </div>
         </div>
