@@ -1,0 +1,25 @@
+@import './../../../assets/utils/variables-mixins';
+
+.button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-color;
+    background-color: $purple;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+        background-color: $purple-dark;
+    }
+
+    &:disabled {
+        background-color: $disabled;
+        color: $disabled-text;
+        cursor: not-allowed;
+    }
+}

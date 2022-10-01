@@ -1,8 +1,8 @@
-@import '../../../assets/utils/variables';
+@import '../../../assets/utils/variables-mixins';
 
 .loader {
-    border: 3px solid $transparent; /* Light grey */
-    border-top: 3px solid $purple; /* Blue */
+    border: 3px solid $transparent; 
+    border-top: 3px solid $purple; 
     border-radius: 50%;
     width: 15px;
     height: 15px;

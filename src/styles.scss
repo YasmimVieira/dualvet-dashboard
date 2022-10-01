@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import 'material-icons/iconfont/material-icons.css';
-@import './assets/utils/variables';
+@import './assets/utils/variables-mixins';
 
 body {
     margin: 0;
@@ -21,28 +20,4 @@ input[type="text"]:focus {
 
 p {
     margin: 0;
-}
-
-.button {
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: $text-color;
-  background-color: $purple;
-  border-radius: 5px;
-  transition: .5s ease-in-out;
-
-  &:hover {
-      background-color: $purple-dark;
-  }
-
-  &:disabled {
-      background-color: $disabled;
-      color: $disabled-text;
-      cursor: not-allowed;
-  }
 }
