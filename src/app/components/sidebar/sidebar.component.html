@@ -3,7 +3,7 @@
         <ul class="menu__list" *ngFor="let sidebarItens of sidebar">
             <li>
                 <a [routerLink]="[sidebarItens.routeLink]" class="menu__list__item">
-                    <i class="material-icons">{{ sidebarItens.icon }}</i>
+                    <i class="material-icons menu__list__item__icon">{{ sidebarItens.icon }}</i>
                     <span>{{ sidebarItens.label }}</span>
                 </a>
             </li>
@@ -11,6 +11,6 @@
     </section>
     <footer class="menu__profile">
         <p>Yasmim</p>
-        <i class="material-icons">logout</i>
+        <i class="material-icons ">logout</i>
     </footer>
 </aside>
