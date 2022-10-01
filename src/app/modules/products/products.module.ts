@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
 import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
+import { CardsComponent } from 'src/app/components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
     GraphComponent,
     SpinnerComponent,
     SkeletonComponent,
+    CardsComponent,
   ],
   imports: [
     CommonModule,

@@ -18,7 +18,6 @@ import { InputsComponent } from './components/inputs/inputs.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent,
     ButtonComponent,
     ModalComponent,
     InputsComponent,

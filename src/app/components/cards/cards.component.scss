@@ -1,0 +1,27 @@
+@import './../../../assets/utils/variables-mixins';
+
+.cards {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+
+    &__infos {
+        background-color: $dark;
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 700;
+
+        &__title {
+            margin: 0;
+            color: $purple;
+        }
+    }
+
+    &__line {
+        width: 20%;
+        border: 1px solid $purple;
+    }
+}
