@@ -5,19 +5,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: auto;
 }
 
 .form {
-    margin: 1rem;
+    margin: 2rem 0;
     padding: 1rem;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
     background-color: $dark;
+    width: 80%;
 
     &__title {
         border-left: 5px solid $purple;
@@ -38,7 +34,6 @@
             outline: none;
             color: $white;
 
-
             &--upload {
                 background-color: $black-dark;
                 border: 2px dotted $purple;
@@ -47,7 +42,7 @@
                 padding: 1rem;
                 position: relative;
                 resize: none;
-                font-size: 1rem;
+                font-size: 0.5rem;
                 text-align: center;
                 margin-top: 1rem;
                 display: flex;
@@ -56,7 +51,7 @@
                 [type="file"] {
                     cursor: pointer;
                     display: block;
-                    font-size: 999px;
+                    font-size: 0.5rem;
                     filter: alpha(opacity=0);
                     min-height: 100%;
                     min-width: 100%;
@@ -77,9 +72,4 @@
     &__footer {
         width: 100%;
     }
-
-}
-
-input[type="file"] {
-    border: none;
 }
