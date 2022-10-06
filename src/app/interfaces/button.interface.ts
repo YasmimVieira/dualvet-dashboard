@@ -1,5 +1,7 @@
-export interface Button {
+export interface ButtonInterface {
     buttonTitle: string;
     buttonType: string;
-    buttonStyle: string;
+    buttonStyle?: string;
+    buttonSpinner: boolean;
+    buttonFormValidate?: any;
 }

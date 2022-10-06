@@ -1,1 +1,8 @@
-<button [type]="buttonInformations.buttonType">{{ buttonInformations.buttonTitle }}</button>
+<ng-container *ngIf="buttonInformations.buttonSpinner === false; else spinnerValid">
+    <button type="submit" [disabled]="!buttonInformations.buttonFormValidate.valid" class="button">{{ buttonInformations.buttonTitle }}</button>
+</ng-container>
+<ng-template #spinnerValid>
+    <button type="buttonInformations.buttonType" class="button">
+        <app-spinner></app-spinner>
+    </button>
+</ng-template>

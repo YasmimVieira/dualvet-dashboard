@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Button } from 'src/app/interfaces/button.interface';
+import { ButtonInterface } from 'src/app/interfaces/button.interface';
 
 @Component({
   selector: 'app-button',
@@ -8,7 +8,7 @@ import { Button } from 'src/app/interfaces/button.interface';
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() buttonInformations!: Button;
+  @Input() buttonInformations!: ButtonInterface;
 
   constructor() { }
 

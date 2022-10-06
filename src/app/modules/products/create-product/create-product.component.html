@@ -12,14 +12,7 @@
             </label>
         </section>
         <footer class="form__footer">
-            <ng-container *ngIf="!spinner; else spinnerValid">
-                <button type="submit" [disabled]="!productForm.valid" class="button">Criar produto</button>
-            </ng-container>
-            <ng-template #spinnerValid>
-                <button type="submit" class="button">
-                    <app-spinner></app-spinner>
-                </button>
-            </ng-template>
+            <app-button [buttonInformations]="buttonInformations"></app-button>
         </footer>
     </form>
 </section>

@@ -10,8 +10,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
-import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 import { CardsComponent } from 'src/app/components/cards/cards.component';
+import { ButtonComponent } from 'src/app/components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { CardsComponent } from 'src/app/components/cards/cards.component';
     SpinnerComponent,
     SkeletonComponent,
     CardsComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
