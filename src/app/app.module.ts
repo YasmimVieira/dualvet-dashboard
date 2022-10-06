@@ -13,13 +13,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { ButtonComponent } from './components/button/button.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { InputsComponent } from './components/inputs/inputs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
-    InputsComponent,
     SidebarComponent
   ],
   imports: [
