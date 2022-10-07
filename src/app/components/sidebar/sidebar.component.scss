@@ -5,11 +5,23 @@
     justify-content: space-between;
     background-color: $purple;
     border-radius: 0 0 10px 10px;
+
+    @include responsive('tablet') {
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        border-radius: 0;
+        width: 10%
+    };  
     
     &__itens {
         display: flex;
         align-items: center;
         width: 100%;
+
+        @include responsive('tablet') {
+            flex-direction: column;
+        }
     }
 
     &__list {
