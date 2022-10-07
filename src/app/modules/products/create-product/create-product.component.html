@@ -1,17 +1,17 @@
 <section class="product">
-    <form class="form" [formGroup]="productForm" (ngSubmit)="submitNewProduct()">
-        <h3 class="form__title">Criar novo produto</h3>
-        <section class="form__inputs">
-            <input type="text" class="form__inputs__style" placeholder="Digite o nome do produto" formControlName="productName">
-            <input type="text" class="form__inputs__style" placeholder="Digite a descrição do produto" formControlName="productDescription">
-            <input type="text" class="form__inputs__style" placeholder="Digite o preço do produto" formControlName="productPrice">
-            <label class="form__inputs__style--upload">
+    <form class="product__form" [formGroup]="productForm" (ngSubmit)="submitNewProduct()">
+        <h3 class="product__form__title">Criar novo produto</h3>
+        <section class="product__form__inputs">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite o nome do produto" formControlName="productName">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite a descrição do produto" formControlName="productDescription">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite o preço do produto" formControlName="productPrice">
+            <label class="product__form__inputs__style--upload">
                 <span>Adicione a foto do produto</span>
-                <i class="material-icons form__inputs__style--span">upload_file</i>
+                <i class="material-icons product__form__inputs__style--span">upload_file</i>
                 <input type="file">
             </label>
         </section>
-        <footer class="form__footer">
+        <footer class="product__form__footer">
             <app-button [buttonInformations]="buttonInformations"></app-button>
         </footer>
     </form>
