@@ -1,6 +1,6 @@
-<canvas baseChart width="1200" height="400"
-[type]="'line'"
-[data]="lineChartData"
-[options]="lineChartOptions"
-[legend]="lineChartLegend">
-</canvas>
+<section class="graph">
+    <p class="graph__title">Andamento das vendas</p>
+    <canvas baseChart [type]="'line'" [data]="lineChartData" [options]="lineChartOptions" [legend]="lineChartLegend"
+    class="graph__line">
+    </canvas>
+</section>

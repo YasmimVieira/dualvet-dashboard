@@ -1,0 +1,17 @@
+@import './../../../assets/utils/variables-mixins';
+
+.graph {
+    &__title {
+        text-align: center;
+        font-weight: $bold;
+    }
+
+    background-color: $dark;
+    border-radius: 5px;
+    margin: 3rem 1rem 0 6.5rem;
+    padding: 1rem;
+
+    &__line {
+        width: 100%;
+    }
+}
