@@ -14,6 +14,8 @@ $disabled-text: #aaa;
 $transparent: #f3f3f3;
 $skeleton-color: #ebebeb;
 $bold: 700;
+$font-medium: 0.9rem;
+$font-small: 0.5rem;
 
 @mixin responsive($phone) {
     @if $phone == tablet {

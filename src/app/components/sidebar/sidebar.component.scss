@@ -39,6 +39,10 @@
 
             &__icon {
                 display: none;
+                
+                @include responsive('tablet') {
+                    display: block;
+                }
             }
         }
 
@@ -53,10 +57,11 @@
         align-items: center;
         font-size: 0.6rem;
         margin: 0.5rem;
-    }
-}
 
-.material-icons {
-    font-size: 0.5rem;
-    margin-left: 0.5rem;
+        @include responsive('tablet') {
+            font-size: $font-medium;
+            font-weight: $bold;
+            flex-direction: column;
+        }
+    }
 }
