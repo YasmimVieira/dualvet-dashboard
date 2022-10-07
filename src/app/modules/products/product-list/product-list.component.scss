@@ -6,11 +6,21 @@
     justify-content: space-around;
     margin: 1rem;
 
+    @include responsive('tablet') {
+        margin: 0 1rem 0 6rem;
+    }
+
     &__list {
         background-color: $dark;
         border-radius: 10px;
         padding: 0.9rem;
         margin-top: 1rem;
+
+        @include responsive('tablet') {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+        }
 
         &__title {
             font-weight: $bold;
@@ -24,6 +34,13 @@
         &__icons {
             padding: 0.2rem;
             border-radius: 5px;
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            border: none;
+            color: $white;
+            cursor: pointer;
+
             &--edit {
                 background-color: $yellow;
             }
