@@ -13,6 +13,7 @@ $disabled: #eee;
 $disabled-text: #aaa;
 $transparent: #f3f3f3;
 $skeleton-color: #ebebeb;
+$brown: #562020;
 $bold: 700;
 $font-medium: 0.9rem;
 $font-small: 0.5rem;
@@ -23,7 +24,7 @@ $font-small: 0.5rem;
             @content;
         }
     } @else if $phone == desktop  {
-        @media only screen and (min-width: 2560px) {
+        @media only screen and (min-width: 1024px) {
             @content;
         }
     }

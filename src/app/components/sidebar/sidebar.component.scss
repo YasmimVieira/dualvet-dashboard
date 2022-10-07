@@ -12,7 +12,32 @@
         height: 100vh;
         border-radius: 0;
         width: 10%
-    };  
+    };
+    
+    @include responsive('desktop')  {
+        width: 5%;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: $bold;
+        color: $white;
+        font-size: 2rem;
+    }
+
+    &__logo {
+        display: none;
+
+        @include responsive('tablet') {
+            margin: 0.2rem;
+            height: 8%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: $purple-dark;
+        }
+    }
     
     &__itens {
         display: flex;
@@ -29,6 +54,7 @@
     &__list {
         text-align: center;
         padding: 0.2rem;
+        transition: .5s ease-in-out;
 
         li {
             list-style: none;
