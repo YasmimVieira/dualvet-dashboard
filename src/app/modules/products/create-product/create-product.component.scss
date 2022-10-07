@@ -1,4 +1,4 @@
-@import '../../../../assets/utils/variables-mixins';
+@import "../../../../assets/utils/variables-mixins";
 
 .product {
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
     height: 100vh;
 
-    @include responsive('tablet') {
+    @include responsive("tablet") {
         margin-left: 5rem;
     }
 
@@ -17,17 +17,17 @@
         border-radius: 5px;
         background-color: $dark;
         width: 80%;
-    
+
         &__title {
             border-left: 5px solid $purple;
             padding-left: 0.5rem;
         }
-    
+
         &__inputs {
             display: flex;
             width: 100%;
             flex-direction: column;
-    
+
             &__style {
                 border: none;
                 background-color: $black-dark;
@@ -36,7 +36,7 @@
                 border-radius: 5px;
                 outline: none;
                 color: $white;
-    
+
                 &--upload {
                     background-color: $black-dark;
                     border: 2px dotted $purple;
@@ -51,6 +51,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @include responsive("tablet") {
+                        font-size: 0.9rem;
+                    }
+
                     [type="file"] {
                         cursor: pointer;
                         display: block;
@@ -63,19 +68,21 @@
                         right: 0px;
                         top: 0px;
                         z-index: 1;
+                        @include responsive("tablet") {
+                            font-size: 0.9rem;
+                        }
                     }
                 }
-    
+
                 &--span {
                     margin-left: 1rem;
                     font-size: 0.9rem;
                 }
             }
         }
-    
+
         &__footer {
             width: 100%;
         }
     }
 }
-

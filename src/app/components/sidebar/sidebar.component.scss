@@ -21,6 +21,8 @@
 
         @include responsive('tablet') {
             flex-direction: column;
+            justify-content: center;
+            height: 85vh;
         }
     }
 
