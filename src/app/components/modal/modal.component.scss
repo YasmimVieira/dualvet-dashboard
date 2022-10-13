@@ -1,7 +1,8 @@
+@import '../../../assets/utils/variables-mixins';
+
 .modal {
-    background: #fff;
+    background: $dark;
     border-radius: 8px;
-    box-shadow: 0 2px 8px #333;
     min-width: 320px;
     position: fixed;
     left: 50%;
@@ -12,7 +13,7 @@
 }
 
 .overlay {
-    background: #000;
+    background: $black;
     height: 100vh;
     left: 0;
     opacity: 0.5;
