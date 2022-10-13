@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: '', component: ProductsComponent },
     { path: PageRoutes.PRODUCTS_CREATE, component: CreateProductComponent },
     { path: PageRoutes.PRODUCT_LIST, component: ProductListComponent },
-    { path: PageRoutes.PRODUCTS_EDIT, component: EditProductComponent }
+    { path: PageRoutes.PRODUCTS_EDIT, component: EditProductComponent },
 ];
 
 @NgModule({

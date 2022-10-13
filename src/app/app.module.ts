@@ -15,7 +15,6 @@ import { ModalComponent } from './components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent,
     SidebarComponent
   ],
   imports: [

@@ -1,13 +1,6 @@
-<section class="modal">
-    <header class="modal__header">
-        {{ modalInformations.title }}
-    </header>
-    <section class="modal__body">
-        <p class="modal__body__title"></p>
-        <p class="modal__body__description"></p>
-    </section>
-    <footer class="modal__footer">
-        <app-button></app-button>
-        <app-button></app-button>
-    </footer>
-</section>
+<ng-container *ngIf="showModal">
+    <div class="modal">
+        <ng-content></ng-content>
+    </div>
+    <div (click)="toggle()" class="modal__overlay"></div>
+</ng-container>
