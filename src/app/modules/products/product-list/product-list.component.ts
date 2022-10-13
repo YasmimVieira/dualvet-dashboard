@@ -19,7 +19,6 @@ export class ProductListComponent implements OnInit {
     this.getProductList();
   }
 
-
   /**
    * Lista todos produtos
    */

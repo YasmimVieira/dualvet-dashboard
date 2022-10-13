@@ -12,6 +12,8 @@ import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
 import { CardsComponent } from 'src/app/components/cards/cards.component';
 import { ButtonComponent } from 'src/app/components/button/button.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
     SpinnerComponent,
     SkeletonComponent,
     CardsComponent,
-    ButtonComponent
+    ButtonComponent,
+    DeleteProductComponent,
+    EditProductComponent
   ],
   imports: [
     CommonModule,

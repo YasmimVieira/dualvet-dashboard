@@ -53,4 +53,13 @@ export class ProductsService {
   public deleteProduct(id: number): Observable<Products> {
     return this.httpClient.delete<Products>(`${this.API}/${id}`);
   }
+
+  /**
+   * Pega o id do produto
+   * @param id 
+   * @returns 
+   */
+  public findById(id: number): Observable<Products> {
+    return this.httpClient.get<Products>(`${this.API}/${id}`);
+  }
 }
