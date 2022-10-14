@@ -5,9 +5,8 @@
     
         <div class="card__modal" *ngIf="isAvailable">
             <button class="card__modal__icons card__modal__icons--edit" routerLink="/edit/{{ products.id }}"><i class="material-icons">edit</i></button>    
-            <button class="card__modal__icons card__modal__icons--delete" (click)="modal.toggle()"><i class="material-icons">delete</i></button>
+            <button class="card__modal__icons card__modal__icons--delete" (click)="modal.toggle(getProduct)"><i class="material-icons">delete</i></button>
             <app-modal #modal>
-                <p>teste</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, totam! Esse est minima dolores, impedit repellat commodi nihil quaerat obcaecati voluptatibus omnis asperiores voluptate porro possimus magnam tempore. Quia, repudiandae?</p>
             </app-modal>
         </div>

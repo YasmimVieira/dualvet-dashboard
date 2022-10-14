@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from 'src/app/interfaces/products.interface';
 
 @Component({
   selector: 'app-modal',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ModalComponent {
 
   showModal = false;
+  product = []
 
-  public toggle(): void {
+  public toggle(productInfo: Products[]): void {
+    localStorage.setItem('productSelected', JSON.stringify(productInfo))
+    console.log(productInfo)
     this.showModal = !this.showModal;
   }
 

@@ -10,6 +10,7 @@ import { ProductsService } from 'src/app/service/products.service';
 })
 export class ProductListComponent implements OnInit {
   public product!: Products[];
+  public getProduct!: Products[];
   public result!: ResultState;
   public isAvailable = false;
   
@@ -27,7 +28,10 @@ export class ProductListComponent implements OnInit {
 
     this.productService.getProducts()
       .subscribe({
-        next: (resp) => this.product = resp,
+        next: (resp) => {
+          this.product = resp;
+          this.getProduct = JSON.parse(localStorage.getItem('productSelected') || '{}');
+        },
         error: (error) => this.result = error
       })
   }
