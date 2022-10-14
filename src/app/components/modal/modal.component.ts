@@ -9,11 +9,8 @@ import { Products } from 'src/app/interfaces/products.interface';
 export class ModalComponent {
 
   showModal = false;
-  product = []
 
-  public toggle(productInfo: Products[]): void {
-    localStorage.setItem('productSelected', JSON.stringify(productInfo))
-    console.log(productInfo)
+  public toggle(): void {
     this.showModal = !this.showModal;
   }
 

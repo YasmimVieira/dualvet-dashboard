@@ -55,7 +55,7 @@ export class CreateProductComponent implements OnInit {
     this.productService.setNewProduct(this.productForm.value)
       .subscribe({
         next: () => {
-          this.toastrService.success(ToastMessage.TOAST_SUCCESS, ToastMessage.TOAST_SUCCESS_TITLE);
+          this.toastrService.success(ToastMessage.TOAST_PRODUCT_CREATE, ToastMessage.TOAST_SUCCESS_TITLE);
           this.router.navigate([PageRoutes.PRODUCT_LIST])
         },
         error: (error) => this.toastrService.error(error.error, ToastMessage.TOAST_ERROR_TITLE)

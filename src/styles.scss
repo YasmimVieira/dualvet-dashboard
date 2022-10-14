@@ -13,3 +13,8 @@ body {
 input[type="text"]:focus {
     border: 2px solid $purple;
 }
+
+.line {
+    border: 2px solid $purple;
+    width: 50%;
+}

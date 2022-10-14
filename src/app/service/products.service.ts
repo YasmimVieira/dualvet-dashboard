@@ -50,7 +50,7 @@ export class ProductsService {
    * @param id 
    * @returns 
    */
-  public deleteProduct(id: number): Observable<Products> {
+  public deleteProduct(id: string): Observable<Products> {
     return this.httpClient.delete<Products>(`${this.API}/${id}`);
   }
 
