@@ -43,7 +43,7 @@ export class CreateProductComponent implements OnInit {
       buttonTitle: ButtonInformations.CREATE_PRODUCT_TITLE,
       buttonType: ButtonInformations.BUTTON_SUBMIT,
       buttonSpinner: false,
-      buttonFormValidate: this.productForm
+      buttonFormValidate: this.productForm.invalid
     }
   }
 

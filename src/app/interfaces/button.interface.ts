@@ -3,5 +3,5 @@ export interface ButtonInterface {
     buttonType: string;
     buttonStyle?: string;
     buttonSpinner: boolean;
-    buttonFormValidate?: any;
+    buttonFormValidate: any;
 }

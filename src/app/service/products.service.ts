@@ -42,7 +42,7 @@ export class ProductsService {
    * @returns 
    */
   public editProduct(productInformation: Products): Observable<Products> {
-    return this.httpClient.put<Products>(`${this.API}/${productInformation.id}`, productInformation);
+    return this.httpClient.put<Products>(`${this.API}/${productInformation._id}`, productInformation);
   }
 
   /**

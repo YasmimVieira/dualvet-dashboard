@@ -3,8 +3,10 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ButtonInformations } from 'src/app/enum/button-informations.enum';
 import { PageRoutes } from 'src/app/enum/page-routes.enum';
+import { PageTitle } from 'src/app/enum/page-title.enum';
 import { ToastMessage } from 'src/app/enum/toast-messages.enum';
 import { ButtonInterface } from 'src/app/interfaces/button.interface';
+import { Modal } from 'src/app/interfaces/modal.interface';
 import { Products } from 'src/app/interfaces/products.interface';
 import { ResultState } from 'src/app/interfaces/result-state.interface';
 import { ProductsService } from 'src/app/service/products.service';
@@ -15,16 +17,26 @@ import { ProductsService } from 'src/app/service/products.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  public product!: Products[];
+
+  public products!: Products[];
   public productDelete!: Products;
-  public getProduct!: Products[];
+  public getProduct!: Products;
   public result!: ResultState;
   public isAvailable = false;
-  
+  public modalInfoObj: Modal = {
+    title: PageTitle.MODAL_DELETE_PRODUCT,
+    bodyTitle: PageTitle.MODAL_DELETE_PRODUCT_DESCRIPTION,
+  }
+  public buttonInfos: ButtonInterface = {
+    buttonTitle: ButtonInformations.DELETE_PRODUCT_TITLE,
+    buttonType: ButtonInformations.BUTTON_SUBMIT,
+    buttonSpinner: false,
+    buttonFormValidate: true
+  }
+
   constructor(
     private productService: ProductsService,
     private toastrService: ToastrService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,24 +51,22 @@ export class ProductListComponent implements OnInit {
 
     this.productService.getProducts()
       .subscribe({
-        next: (resp) => {
-          this.product = resp
-          console.log(resp)
-          this.product.map(item => console.log(item.id))
-        },
+        next: (resp) => this.products = resp,
         error: (error) => this.result = error
       })
   }
 
-  public deleteProduct(): void {
-    this.productService.deleteProduct(this.productDelete.id = '')
+  public deleteProduct(id: string): void {
+    this.buttonInfos.buttonSpinner = true;
+    this.productService.deleteProduct(id)
     .subscribe({
-      next: () => {
-        this.router.navigate([PageRoutes.PRODUCT_LIST]);
+      next: (resp) => {
+        this.buttonInfos.buttonSpinner = false;
+        this.getProductList()
         this.toastrService.success(ToastMessage.TOAST_PRODUCT_DELETE, ToastMessage.TOAST_SUCCESS_TITLE);
+        console.log(resp)
       },
       error: (error) => console.error(error)
-    }
-    )
+    })
   }
 }

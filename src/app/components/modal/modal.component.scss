@@ -1,6 +1,8 @@
 @import '../../../assets/utils/variables-mixins';
 
+
 .modal {
+    text-align: center;
     background: $dark;
     border-radius: 8px;
     min-width: 320px;
@@ -10,6 +12,38 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
+    
+    &__header {
+        text-align: left;
+        i {
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        background-color: $purple;
+        border: none;
+        border-radius: 5px;
+        padding: 1rem;
+        color: $white;
+        cursor: pointer;
+
+        &--delete {
+            background-color: $red;
+            margin-top: 1rem;
+        }
+    }
+
+    &__body {
+        p {
+            margin-top: 1rem;
+            font-weight: $bold;
+        }
+    }
+
+    &__removed {
+        display: none;
+    }
 }
 
 .overlay {

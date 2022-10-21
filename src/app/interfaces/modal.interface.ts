@@ -1,4 +1,4 @@
 export interface Modal {
     title: string;
-    description: string;
+    bodyTitle: string;
 }

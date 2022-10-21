@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
@@ -34,6 +34,7 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
     NgChartsModule,
     FormsModule,
     ReactiveFormsModule,
-  ]
+  ],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class ProductsModule { }

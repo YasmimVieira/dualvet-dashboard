@@ -1,6 +1,18 @@
 <ng-container *ngIf="showModal">
-    <div class="modal">
-        <ng-content></ng-content>
-    </div>
+    <section class="modal">
+        <header class="modal__header">
+            <button class="material-icons" (click)="closeModal()">close</button>
+        </header>
+        <section class="modal__body">
+            <p>{{ modalInformations.title }}</p>
+            <hr class="line">
+
+            <p>{{ modalInformations.bodyTitle }}</p>
+           <ng-content></ng-content>
+        </section>
+        <footer class="modal__footer">
+            <app-button [buttonInformations]="buttonInformations" (click)="newEvent.emit()">{{ buttonInformations.buttonTitle }}</app-button>
+        </footer>
+    </section>
     <div (click)="toggle()" class="overlay"></div>
 </ng-container>

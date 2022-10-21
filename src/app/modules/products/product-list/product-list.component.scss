@@ -51,26 +51,4 @@
             }
         }
     }
-
-    &__modal {
-        text-align: center;
-        
-        span {
-            font-weight: $bold;
-        }
-
-        &__link {
-            background-color: $purple;
-            border: none;
-            border-radius: 5px;
-            padding: 1rem;
-            color: $white;
-            cursor: pointer;
-
-            &--delete {
-                background-color: $red;
-                margin-left: 2rem;
-            }
-        }
-    }
 }

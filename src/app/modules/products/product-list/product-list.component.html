@@ -1,26 +1,19 @@
 <section class="card">
-    <section class="card__list" *ngFor="let products of product">
-        <app-skeleton *ngIf="!isAvailable" Cwidth="100" Cheight="100"></app-skeleton>
-        <p *ngIf="isAvailable" class="card__list__title">{{ products.id }} | {{ products.productName | titlecase }}</p>
+    <section class="card__list" *ngFor="let product of products">
+        <p *ngIf="isAvailable" class="card__list__title"> {{ product.productName | titlecase }}</p>
     
         <div class="card__modal" *ngIf="isAvailable">
-            <button class="card__modal__icons card__modal__icons--edit" routerLink="/edit/{{ products.id }}"><i class="material-icons">edit</i></button>    
+            <button class="card__modal__icons card__modal__icons--edit" ><i class="material-icons">edit</i></button>    
             <button class="card__modal__icons card__modal__icons--delete" (click)="modal.toggle()"><i class="material-icons">delete</i></button>
-            <app-modal #modal>
-                <header>
-                    <p class="card__mdal">Voce tem certeza que deseja excluir <span>{{ products.productName }}</span> ? </p>
-                    <hr class="line">
-                </header>
-                <section>
-                    <p>Voce perdera as seguintes informacoes:</p>
-                    <p>{{ products.id }}</p>
-                    <p>{{ products.productName }}</p>
-                    <p>{{ products.productDescription }}</p>
-                </section>
-                <footer>
-                    <button class="card__modal__link" routerLink="'list'">Voltar para tela anterior</button>
-                    <button class="card__modal__link card__modal__link--delete" (click)="deleteProduct()">Deletar produto</button>
-                </footer>
+            <app-modal 
+            #modal 
+            [modalInformations]="modalInfoObj"
+            [buttonInformations]="buttonInfos"
+            (newEvent)="deleteProduct(product._id)"
+            >
+                <p>{{ product.productName }}</p>
+                <p>{{ product.productDescription }}</p>
+                <p>{{ product.productPrice }}</p>
             </app-modal>
         </div>
     </section>    
