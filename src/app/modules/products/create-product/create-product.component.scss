@@ -18,6 +18,10 @@
         background-color: $dark;
         width: 80%;
 
+        @include responsive('desktop') {
+            width: 50%;
+        }
+
         &__title {
             border-left: 5px solid $purple;
             padding-left: 0.5rem;

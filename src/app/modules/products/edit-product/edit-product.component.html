@@ -1,0 +1,19 @@
+
+<section class="product" *ngIf="editProductForm">
+    <form class="product__form" [formGroup]="editProductForm" (ngSubmit)="editProduct()">
+        <h3 class="product__form__title">Criar novo produto</h3>
+        <section class="product__form__inputs">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite o nome do produto" formControlName="productName">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite a descrição do produto" formControlName="productDescription">
+            <input type="text" class="product__form__inputs__style" placeholder="Digite o preço do produto" formControlName="productPrice">
+            <label class="product__form__inputs__style--upload">
+                <span>Adicione a foto do produto</span>
+                <i class="material-icons product__form__inputs__style--span">upload_file</i>
+                <input type="file">
+            </label>
+        </section>
+        <footer class="product__form__footer">
+            <app-button [buttonInformations]="buttonInformations"></app-button>
+        </footer>
+    </form>
+</section>

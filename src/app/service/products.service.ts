@@ -42,6 +42,7 @@ export class ProductsService {
    * @returns 
    */
   public editProduct(productInformation: Products): Observable<Products> {
+    console.log(productInformation)
     return this.httpClient.put<Products>(`${this.API}/${productInformation._id}`, productInformation);
   }
 
@@ -59,7 +60,7 @@ export class ProductsService {
    * @param id 
    * @returns 
    */
-  public findById(id: number): Observable<Products> {
+  public findById(id: string): Observable<Products> {
     return this.httpClient.get<Products>(`${this.API}/${id}`);
   }
 }

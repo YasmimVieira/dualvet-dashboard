@@ -3,7 +3,7 @@
         <p *ngIf="isAvailable" class="card__list__title"> {{ product.productName | titlecase }}</p>
     
         <div class="card__modal" *ngIf="isAvailable">
-            <button class="card__modal__icons card__modal__icons--edit" ><i class="material-icons">edit</i></button>    
+            <button class="card__modal__icons card__modal__icons--edit" ><i class="material-icons" routerLink="/edit/{{ product._id }}">edit</i></button>    
             <button class="card__modal__icons card__modal__icons--delete" (click)="modal.toggle()"><i class="material-icons">delete</i></button>
             <app-modal 
             #modal 
