@@ -12,12 +12,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { ModalComponent } from './components/modal/modal.component';
 import { SearchComponent } from './components/search/search.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    SearchComponent
+    SearchComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

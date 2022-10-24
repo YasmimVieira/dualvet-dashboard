@@ -26,12 +26,8 @@ export class ProductListComponent implements OnInit {
   public modalInfoObj: Modal = {
     title: PageTitle.MODAL_DELETE_PRODUCT,
     bodyTitle: PageTitle.MODAL_DELETE_PRODUCT_DESCRIPTION,
-  }
-  public buttonInfos: ButtonInterface = {
     buttonTitle: ButtonInformations.DELETE_PRODUCT_TITLE,
-    buttonType: ButtonInformations.BUTTON_SUBMIT,
-    buttonSpinner: false,
-    buttonFormValidate: true
+    buttonColor: "red"
   }
 
   constructor(
@@ -57,11 +53,9 @@ export class ProductListComponent implements OnInit {
   }
 
   public deleteProduct(id: string): void {
-    this.buttonInfos.buttonSpinner = true;
     this.productService.deleteProduct(id)
     .subscribe({
       next: (resp) => {
-        this.buttonInfos.buttonSpinner = false;
         this.getProductList()
         this.toastrService.success(ToastMessage.TOAST_PRODUCT_DELETE, ToastMessage.TOAST_SUCCESS_TITLE);
         console.log(resp)

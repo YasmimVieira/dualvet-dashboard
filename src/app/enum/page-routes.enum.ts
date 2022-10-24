@@ -5,5 +5,6 @@ export enum PageRoutes {
     PRODUCTS_DELETE = 'delete',
     PRODUCTS_EDIT = 'edit/:id',
     AUTHENTICATION = 'authentication',
-    SIGNUP = 'signup'
+    SIGNUP = 'signup',
+    NOT_FOUND = 'notfound'
 }

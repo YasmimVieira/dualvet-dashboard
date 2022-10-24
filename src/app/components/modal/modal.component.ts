@@ -17,7 +17,6 @@ export class ModalComponent {
   ) {}
 
   @Input() modalInformations!: Modal;
-  @Input() buttonInformations!: ButtonInterface;
   @Output() newEvent = new EventEmitter<string>();
 
   showModal = false;

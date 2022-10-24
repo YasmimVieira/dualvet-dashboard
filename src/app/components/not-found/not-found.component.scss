@@ -1,0 +1,48 @@
+@import './../../../assets/utils/variables-mixins';
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__img {
+        width: 50%;
+        height: 50%;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: $bold;
+    }
+
+    &__link {
+        position: relative;
+        color: $purple;
+        font-size: 1.2rem;
+        font-weight: $bold;
+        cursor: pointer;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.175rem;
+            left: 0;
+            bottom: 0;
+            background: $purple;
+        }
+
+        &--effect::after {
+            transform: scale(0, 1);
+            transform-origin: 0% 100%;
+            transition: transform 0.3s ease;
+        }
+
+        &--effect:hover::after {
+            transform: scale(1, 1);
+        }
+    }
+}
