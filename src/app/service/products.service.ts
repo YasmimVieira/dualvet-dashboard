@@ -18,10 +18,7 @@ export class ProductsService {
    * @returns 
    */
   public getProducts(): Observable<Products[]> {
-    return this.httpClient.get<Products[]>(this.API)
-    .pipe(
-      resp => resp
-    )
+    return this.httpClient.get<Products[]>(this.API);
   }
 
   /**
@@ -30,10 +27,7 @@ export class ProductsService {
    * @returns 
    */
   public setNewProduct(productInformation: Products): Observable<Products> {
-    return this.httpClient.post<Products>(this.API, productInformation)
-    .pipe(
-      resp => resp
-    )
+    return this.httpClient.post<Products>(this.API, productInformation);
   }
 
   /**
@@ -42,7 +36,6 @@ export class ProductsService {
    * @returns 
    */
   public editProduct(productInformation: Products): Observable<Products> {
-    console.log(productInformation)
     return this.httpClient.put<Products>(`${this.API}/${productInformation._id}`, productInformation);
   }
 

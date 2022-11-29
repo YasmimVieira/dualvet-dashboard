@@ -13,13 +13,14 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { ModalComponent } from './components/modal/modal.component';
 import { SearchComponent } from './components/search/search.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SharedModuleModule } from './shared/shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     SearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

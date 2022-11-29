@@ -8,12 +8,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { GraphComponent } from '../../components/graph/graph.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { SkeletonComponent } from '../../components/skeleton/skeleton.component';
 import { CardsComponent } from 'src/app/components/cards/cards.component';
 import { ButtonComponent } from 'src/app/components/button/button.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,8 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
     CreateProductComponent,
     ProductListComponent,
     GraphComponent,
-    SpinnerComponent,
     SkeletonComponent,
     CardsComponent,
-    ButtonComponent,
     EditProductComponent,
     ModalComponent
   ],
@@ -34,6 +32,7 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
     NgChartsModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModuleModule
   ],
   schemas: [NO_ERRORS_SCHEMA]
 })
