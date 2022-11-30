@@ -50,13 +50,7 @@ export class AuthenticationService {
   }
 
   public createUser(user: User): Observable<User> {
-    return this.httpClient.post<User>(`${this.API}/signup`, user)
-    .pipe(
-      tap((response) => {
-        this.setUser(response.username);
-        this.setToken(response.token);
-      })
-    )
+    return this.httpClient.post<User>(`${this.API}signup`, user);
   }
 
   public loginUser(user: UserLogin): Observable<UserLogin> {

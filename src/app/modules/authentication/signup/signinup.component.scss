@@ -1,10 +1,27 @@
 @import '../../../../assets/utils/variables-mixins';
 
+.signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: $purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .signin {
     background-color: $dark;
     padding: 2rem;
+    margin: 2rem;
     border-radius: 5px;
-    width: 35vw;
 
     &__header {
         display: flex;
@@ -35,9 +52,12 @@
 
     &__footer {
         text-align: center;
+        display: flex;
+        flex-direction: column;
 
-        &__button {
-            margin-bottom: 1rem;
+
+        span {
+            margin-top: 2rem;
         }
     }
 }

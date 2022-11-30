@@ -1,14 +1,33 @@
-<form class="signin">
-    <header class="signin__header">
-        <h2 class="signin__header__title">Login</h2>
-    </header>
+<section class="signup"> 
+    <form class="signin" [formGroup]="authenticationForm" (ngSubmit)="createUser()">
+        <header class="signin__header">
+            <h2 class="signin__header__title">Cadastro</h2>
+        </header>
+    
+        <div class="signin__inputs">
+            <input 
+            type="text" 
+            class="signin__inputs__style" 
+            placeholder="Digite seu nome de usuario"
+            formControlName="userName">
+            <input 
+            type="email" 
+            class="signin__inputs__style" 
+            placeholder="Digite seu email"
+            formControlName="email">
+            <input 
+            type="password" 
+            class="signin__inputs__style" 
+            placeholder="Digite sua senha"
+            formControlName="password">
+        </div>
+        <footer class="signin__footer">
+            <app-button [buttonInformations]="buttonInformations" class="signin__footer__button"></app-button>
+            <span class="signin__footer--link">Ja possui conta? <a [routerLink]="'/authentication'">Fazer login</a></span>
+        </footer>
+    </form>
 
-    <div class="signin__inputs">
-        <input type="text" class="signin__inputs__style" placeholder="Digite seu nome de usuario">
-        <input type="password" class="signin__inputs__style" placeholder="Digite sua senha">
-    </div>
-    <footer class="signin__footer">
-        <button class="button signin__footer__button">Fazer login</button>
-        <span>Ainda nao possui conta? </span><a [routerLink]="'/signup'">Criar conta</a>
-    </footer>
-</form>
+    <figure class="authentication__image">
+        <img src="../../../assets/img/login.svg" alt="Foto de uma pessoa criativa">
+    </figure>
+</section>
