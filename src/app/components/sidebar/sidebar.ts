@@ -1,6 +1,6 @@
 export const sidebar = [
     {
-        routeLink: '',
+        routeLink: '/products',
         icon: 'home',
         label: 'Home'
     },

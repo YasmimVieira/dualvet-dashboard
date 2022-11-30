@@ -26,7 +26,7 @@ import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
     CardsComponent,
     EditProductComponent,
     ModalComponent,
-    SidebarComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
