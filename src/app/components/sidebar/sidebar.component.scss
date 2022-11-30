@@ -98,5 +98,11 @@
             font-weight: $bold;
             flex-direction: column;
         }
+
+        &__button {
+            border: none;
+            background-color: $purple;
+            cursor: pointer;
+        }
     }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PageRoutes } from 'src/app/enum/page-routes.enum';
 import { sidebar } from './sidebar'
 
 @Component({
@@ -10,9 +12,9 @@ import { sidebar } from './sidebar'
 export class SidebarComponent implements OnInit {
   
   public sidebar = sidebar;
-  public user!: string | null;
+  public user: string;
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.getFirstName();
@@ -20,5 +22,10 @@ export class SidebarComponent implements OnInit {
 
   private getFirstName(): void {
     this.user = JSON.parse(localStorage.getItem('user')).split(' ').slice(0, 1).join(' ')
+  }
+
+  public logout():void {
+    localStorage.clear();
+    this.router.navigate([PageRoutes.AUTHENTICATION]);
   }
 }
