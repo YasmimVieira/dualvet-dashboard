@@ -18,7 +18,6 @@ import { SharedModuleModule } from './shared/shared-module/shared-module.module'
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
     SearchComponent,
     NotFoundComponent,
   ],

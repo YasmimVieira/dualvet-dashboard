@@ -14,6 +14,7 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.module';
+import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.m
     SkeletonComponent,
     CardsComponent,
     EditProductComponent,
-    ModalComponent
+    ModalComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,

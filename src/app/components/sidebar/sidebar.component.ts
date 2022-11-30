@@ -10,9 +10,15 @@ import { sidebar } from './sidebar'
 export class SidebarComponent implements OnInit {
   
   public sidebar = sidebar;
+  public user!: string | null;
   
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getFirstName();
+  }
 
+  private getFirstName(): void {
+    this.user = JSON.parse(localStorage.getItem('user')).split(' ').slice(0, 1).join(' ')
+  }
 }

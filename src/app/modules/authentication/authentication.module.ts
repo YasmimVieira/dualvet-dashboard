@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthenticationComponent } from './authentication.component';
 import { SigninComponent } from './signin/signin.component';
-import { SigninupComponent } from './signinup/signinup.component';
+import { SignupComponent } from './signup/signinup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.module';
 
@@ -13,7 +13,7 @@ import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.m
   declarations: [
     AuthenticationComponent,
     SigninComponent,
-    SigninupComponent,
+    SignupComponent
   ],
   imports: [
     CommonModule,

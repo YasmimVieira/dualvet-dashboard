@@ -16,7 +16,7 @@
         formControlName="password">
     </div>
     <footer class="signin__footer">
-        <app-button [buttonInformations]="buttonInformations"></app-button>
-        <span>Ainda nao possui conta? </span><a [routerLink]="'/signup'">Criar conta</a>
+        <app-button [buttonInformations]="buttonInformations" class="signin__footer__button"></app-button>
+        <span class="signin__footer--link">Ainda nao possui conta? <a [routerLink]="'/signup'">Criar conta</a></span>
     </footer>
 </form>

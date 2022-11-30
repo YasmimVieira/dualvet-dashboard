@@ -34,10 +34,16 @@
     }
 
     &__footer {
+        display: flex;
+        flex-direction: column;
         text-align: center;
 
         &__button {
-            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        &--link {
+            margin-top: 2rem;
         }
     }
 }
