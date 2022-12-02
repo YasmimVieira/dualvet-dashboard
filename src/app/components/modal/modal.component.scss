@@ -44,6 +44,17 @@
     &__removed {
         display: none;
     }
+
+    &__footer {
+        &__button {
+            background-color: $red;
+            border: none;
+            color: $white;
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
 }
 
 .overlay {

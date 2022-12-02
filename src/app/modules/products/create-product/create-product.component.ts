@@ -58,7 +58,10 @@ export class CreateProductComponent implements OnInit {
           this.toastrService.success(ToastMessage.TOAST_PRODUCT_CREATE, ToastMessage.TOAST_SUCCESS_TITLE);
           this.router.navigate([PageRoutes.PRODUCT_LIST])
         },
-        error: (error) => this.toastrService.error(error.error, ToastMessage.TOAST_ERROR_TITLE)
+        error: (error) => {
+          this.buttonInformations.buttonSpinner = false;
+          this.toastrService.error(error.error.error, ToastMessage.TOAST_ERROR_TITLE)
+        }
       });
   }
 }

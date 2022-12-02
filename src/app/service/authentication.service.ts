@@ -10,7 +10,7 @@ import { User, UserLogin } from '../interfaces/authentication.interface';
 })
 export class AuthenticationService {
 
-  private readonly API = 'https://dualvet-api.herokuapp.com/'
+  private readonly API = 'http://localhost:3000/'
   public user!: string | null;
   public token!: string | null;
 

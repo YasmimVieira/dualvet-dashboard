@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  API_URL: 'https://dualvet-api.herokuapp.com/product'
+  API_URL: 'http://localhost:3000/product'
 };

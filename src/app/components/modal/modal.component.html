@@ -11,7 +11,7 @@
            <ng-content></ng-content>
         </section>
         <footer class="modal__footer">
-            <button [ngStyle]="{'background-color': modalInformations.buttonColor}" (click)="newEvent.emit()">{{ modalInformations.buttonTitle }}</button>
+            <button class="modal__footer__button" (click)="newEvent.emit()">{{ modalInformations.buttonTitle }}</button>
         </footer>
     </section>
     <div (click)="toggle()" class="overlay"></div>
